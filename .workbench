@@ -1,0 +1,14 @@
+{
+  "fcRouteDefault": [
+    {
+      "apiUri": "/*",
+      "fcHandler": "render.handler",
+      "httpMethod": "ANY"
+    },
+    {
+      "apiUri": "/api/getAudio",
+      "fcHandler": "getAudio.handler",
+      "httpMethod": "POST"
+    }
+  ]
+}
