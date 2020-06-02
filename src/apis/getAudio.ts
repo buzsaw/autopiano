@@ -11,15 +11,16 @@ export class GetAudioService {
   @Func('getAudio.handler')
   async handler() {
     const body = this.ctx.request.body;
-    let OSS = require('ali-oss');
+    // let OSS = require('ali-oss');
     const metre = body['metre']
-    let store = new OSS({
-        bucket: 'YOURBUCKETNAME',
-        region: 'YOURBUCKETREGION',
-        accessKeyId: 'YOURACCESSKEY',
-        accessKeySecret: 'YOURSECRETACCESSKEY'
-    })
-    const url = store.signatureUrl(metre+'.mp3');
+    // let store = new OSS({
+    //     bucket: 'YOURBUCKETNAME',
+    //     region: 'YOURBUCKETREGION',
+    //     accessKeyId: 'YOURACCESSKEY',
+    //     accessKeySecret: 'YOURSECRETACCESSKEY'
+    // })
+    //const url = store.signatureUrl(metre+'.mp3');
+    const url = 'mp3/'+metre+'.mp3';
     console.log(url);
     return {
       url: url
