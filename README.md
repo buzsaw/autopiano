@@ -33,21 +33,6 @@ $ npm run build
 ### 部署
 点击左侧菜单栏第一个Tab，进行发布
 
-
-## 以下为钢琴后端配置指引
-
-### 将代码包中的音频文件上传至任一OSS桶
-90 BPM 44.mp3
-90 BPM 34.mp3
-### 添加访问控制密钥
-找到src/apis/getAudio.ts, 在以下位置添加访问控制密钥
-```javascript
-bucket: 'YOURBUCKETNAME', 
-region: 'YOURBUCKETREGION', 
-accessKeyId: 'YOURACCESSKEY', 
-accessKeySecret: 'YOURSECRETACCESSKEY'
-```
-
 ## About Midway FaaS
 
 Midway FaaS 是用于构建云函数的 Serverless 框架。帮助您在云原生时代大幅降低维护成本，更专注于产品研发。<br />
