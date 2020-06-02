@@ -1,6 +1,4 @@
 import { Provide, Func, Inject } from '@midwayjs/decorator'
-import {OSS} from 'ali-oss';
-//import { FaaSContext, FunctionHandler} from '@midwayjs/faas';
 
 @Provide()
 export class GetAudioService {
@@ -10,20 +8,12 @@ export class GetAudioService {
 
   @Func('getAudio.handler')
   async handler() {
-    const body = this.ctx.request.body;
-    // let OSS = require('ali-oss');
-    const metre = body['metre']
-    // let store = new OSS({
-    //     bucket: 'YOURBUCKETNAME',
-    //     region: 'YOURBUCKETREGION',
-    //     accessKeyId: 'YOURACCESSKEY',
-    //     accessKeySecret: 'YOURSECRETACCESSKEY'
-    // })
-    //const url = store.signatureUrl(metre+'.mp3');
-    const url = 'mp3/'+metre+'.mp3';
-    console.log(url);
+    console.log('ctx: '+this.ctx);
+    //let body = {metre:'90 BPM 44'};
+    let body = this.ctx.req.body;
+    let url = 'mp3/' +body['metre']+ '.mp3';
     return {
       url: url
-    }
+    };
   }
 }
