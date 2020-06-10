@@ -13,10 +13,13 @@
     "soundfont-player": "^0.12.0"
   },
   "midway-integration": {
-    "tsCodeRoot": "src/apis"
+    "tsCodeRoot": "src/apis",
+    "lifecycle": {
+      "before:package:cleanup": "npm run build"
+    }
   },
   "scripts": {
-    "dev": "npm run local:url & npm run watch",
+    "dev": "WORKBENCH_ENV=development npm run local:url & npm run watch",
     "watch": "react-scripts start",
     "local:url": "node scripts/local.js",
     "build": "react-scripts build",
@@ -42,6 +45,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "midway-faas-workbench-dev": "^1.0.1",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",

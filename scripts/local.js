@@ -1,7 +1,2 @@
-const hostName = process.env.HOSTNAME;
-if (hostName) {
-    console.log('');
-    console.log(`Please open http://${hostName.split('-').slice(0,-2).join('-')}-3000.xide.aliyun.com/`);
-    console.log('');
-    console.log('');
-}
+const dev = require('midway-faas-workbench-dev');
+dev();
