@@ -48,11 +48,11 @@ export default () => {
           className="piano"
           noteRange={{ first: firstNote, last: lastNote }}
           playNote={(midiNumber) => {
+            //console.log(midiNumber)
+            const midi = require('midi/'+midiNumber+'.wav')
             var ac = new AudioContext()
-            Soundfont.instrument(ac, 'acoustic_grand_piano', { soundfont: 'MusyngKite' })
-            .then(function (acoustic_grand_piano) {
-              acoustic_grand_piano.play(midiNumber)
-            })
+            var audio = new Audio(midi)
+            audio.play()
           }}
           stopNote={(midiNumber) => {}}
           width={width*0.7}
