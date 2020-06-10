@@ -49,9 +49,9 @@ export default () => {
           noteRange={{ first: firstNote, last: lastNote }}
           playNote={(midiNumber) => {
             //console.log(midiNumber)
-            const midi = require('midi/'+midiNumber+'.wav')
-            var ac = new AudioContext()
-            var audio = new Audio(midi)
+            const midi = 'midi/'+midiNumber+'.wav';
+            var ac = new AudioContext();
+            var audio = new Audio(midi);
             audio.play()
           }}
           stopNote={(midiNumber) => {}}
