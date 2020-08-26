@@ -24,7 +24,7 @@
     <div class="app-bg" :style="appBgStyle"></div>
 
     <div class="app-content">
-      <h4 style="color: #c00;">仅用于测试阿里云云开发平台测试部署使用</h4>
+      <h4 style="color: #c00;">仅用于阿里云Serverless云开发平台测试部署使用</h4>
       <div>原项目github地址<a href="https://github.com/AutoPiano/AutoPiano">https://github.com/AutoPiano/AutoPiano</a></div>
       <PageHeader></PageHeader>
       <RandomLyric></RandomLyric>
